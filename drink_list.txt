@@ -1,0 +1,5 @@
+Mojito,European,1,2,3,4,5,https://nabaru.cz/koktejly-a-michane-napoje/mojito/;American,1,6,3,4,5,https://nabaru.cz/koktejly-a-michane-napoje/mojito/
+Gin & Tonic,Classic,7,8,https://nabaru.cz/koktejly-a-michane-napoje/gin-tonic/;For Men,7,8,https://nabaru.cz/koktejly-a-michane-napoje/gin-tonic/;For women,7,8,https://nabaru.cz/koktejly-a-michane-napoje/gin-tonic/
+Sidecar,Classic,9,10,11,12,https://nabaru.cz/koktejly-a-michane-napoje/sidecar/
+Blue Blazer,Classic,14,13,12,https://nabaru.cz/koktejly-a-michane-napoje/blue-blazer/
+Ramos Gin Fizz,Classic,7,11,6,12,15,5,16,17,https://nabaru.cz/koktejly-a-michane-napoje/ramos-gin-fizz-2/

@@ -1,0 +1,17 @@
+white_rum,1
+lime,2
+sugar,3
+mint,4
+sparkling_water,5
+lime_juice,6
+gin,7
+tonic,8
+cognac,9
+orange_zest_liqueur,10
+lemon_juice,11
+sugar_syrup,12
+boiled_water,13
+whisky,14
+orange_flower_water,15
+egg_white,16
+cream,17
