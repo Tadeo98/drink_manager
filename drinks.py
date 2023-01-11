@@ -3,7 +3,7 @@ import sys
 
 def main(): #runs as first function from which other functions are triggered
     width = 120  # should be divisible by the number of methods
-    methods = ['Search drink','Edit drink list','Edit list of ingredients']
+    methods = ['Search drink','Search ingredient','Edit drink list','Edit list of ingredients']
     print('\n\n\n{0}\n'.format((width-1)*'*'),end='')
     print('{0:^{1}}\n'.format('WELCOME TO DRINK MANAGER!', width))
     remain = 'y'
@@ -17,8 +17,10 @@ def main(): #runs as first function from which other functions are triggered
         if method == 1:
             search_drink(width)
         elif method == 2:
-            edit_drink_list(width)
+            search_ingredient(width)
         elif method == 3:
+            edit_drink_list(width)
+        elif method == 4:
             edit_ingredients(width)
         else:
             continue
@@ -45,6 +47,35 @@ def search_drink(width):
             continue
 
         remain = input('\n{0:^{1}}\n'.format('To remain in the application, enter [Y].', width)).lower()
+
+def search_ingredient(width):
+    print('\n\n{0}\n'.format((width - 1) * '.'), end='')
+    print('{0:^{1}}\n'.format('SEARCH INGREDIENT APPLICATION', width - 1))
+    while True:
+        print('Enter ingredient to search or type \'help\' for further actions:\n')
+        search = in_method_control('noint','Enter ingredient name (lowercase, capitals, doesn\'t matter)\n. Don\'t use '
+                            'symbols \';\' or \',\'.\nEnter any character to quit this application\n',width)
+        if search == None:
+            continue
+
+        if len(search) < 2:
+            break
+
+        forb = ';,'
+        if len(set(search) & set(forb)) > 0:
+            print('Forbidden symbols were used.\n', end='')
+            continue
+
+        search = search.lower()
+        ingredients = read_ingredient_file()
+        met_ings = {}
+        for name in ingredients.keys():
+            if search in name.lower():
+                met_ings.update({name: ingredients.get(name)})
+        if met_ings == {}:
+            print('No results.\n')
+            continue
+        ingredient_table(width,met_ings)
 
 def edit_drink_list(width): #function for editing the text file containing list of drinks
     methods = ['Add drink','Edit drink','Delete drink']
@@ -201,7 +232,7 @@ def add_ingredient(width):  #function for adding new ingredients to list of ingr
             continue
 
         new_ing = new_ing.lower()
-        ing_list = read_igredient_file()
+        ing_list = read_ingredient_file()
         if new_ing in ing_list.keys():
             print('Ingredient {0} already exists.\n'.format(new_ing),end='')
             continue
@@ -234,35 +265,38 @@ def drink_table(width,drinks):    #prints list of drinks
     mcs = 5 #minimal space between columns
     print('\n\n{1:*<{0}}\n'.format(width-1,''),end='')
     print("{1:^{0}}\n".format(width - 1, 'DRINK LIST'), end='')
-    print("{3:<{0}}{4:<{1}}{5:<{2}}\n\n\n".format(title_len+mcs,var_len+mcs, width-1-title_len-var_len,
+    print("{3:<{0}}{4:<{1}}{5:<{2}}\n\n".format(title_len+mcs,var_len+mcs, width-1-title_len-var_len,
                                             title[0],title[1],title[2]),end='')
     for drink, rest in drinks.items():
-        print("{1:<{0}}".format(title_len+mcs, drink),end='')
+        print("{1:<{0}}".format(title_len+mcs, drink), end='')
         for var in rest:
-            print("{2:<{0}}{3:<{1}}\n".format(var_len + mcs, width - 1 - title_len - var_len, var[0],
-                                              ', '.join(var[1])), end='')
+            ing_lines = []
+            ing_line = ''
+            ing_list = list(var[1])
+            for ing in ing_list:
+                if len(ing_line + ', ' + ing) > width - 2 - title_len - var_len - 2 * mcs:
+                    ing_lines.append(ing_line[:-1])
+                    ing_line = ''
+                if ing == ing_list[-1]:
+                    ing_line += ing
+                    ing_lines.append(ing_line)
+                    break
+                ing_line += ing + ', '
+            print("{1:<{0}}".format(var_len + mcs, var[0]), end='')
+            for line in ing_lines:
+                print("{0:<}\n".format(line), end='')
+                if line != ing_lines[-1]:
+                    print("{1:<{0}}".format(var_len + 2 * mcs + title_len, ''), end='')
             if var != rest[-1]:
-                print("{1:<{0}}".format(title_len+mcs,''), end='')
+                print("\n{1:<{0}}".format(title_len+mcs,''), end='')
             else:
                 print('\n',end='')
+        print('\n', end='')
     print('{1:*<{0}}\n'.format(width-1,''),end='')
 
-
-
-
-    var = drinks.get('Ramos Gin Fizz')[0]
-    ing_lines = []
-    ings = ', '.join(var[1])
-    index = ings[width - 3 - title_len - var_len].rindex(', ', 1)
-    ing_lines.append(ings[:index])
-    ings = ings[index:]
-    # index = ings.rindex(', ', width - 1 - title_len - var_len)
-    # ing_lines.append(ings[index:])
-    print(ing_lines, ings)
-
-
-def print_ingredients(width):   #prints list of ingredients
-    ings = read_igredient_file()
+def ingredient_table(width,ings):   #prints list of ingredients
+    if ings == {}:
+        ings = read_ingredient_file()
     ing_len = max([len(name) for name in ings.keys()])
     #num_len = max([len(str(num)) for num in ings.values()])
     mcs = 2 #minimal space between columns
@@ -334,7 +368,7 @@ def in_method_control(list_of_int,clause,width): #checks if entry is integer fro
                 elif value == 'drinkl':
                     drink_table(width, {})
                 elif value == 'ingl':
-                    print_ingredients(width)
+                    ingredient_table(width,{})
                 return None
             if list_of_int == 'noint':
                 break
@@ -349,7 +383,7 @@ def in_method_control(list_of_int,clause,width): #checks if entry is integer fro
     return value
 
 def convert_ing(conv_list):  #converts between numbers and ingredients according to ing list
-    ingredients = read_igredient_file()
+    ingredients = read_ingredient_file()
     ing_list = []
     if type(conv_list[0]) == type(1):
         for num in conv_list:
@@ -364,7 +398,7 @@ def convert_ing(conv_list):  #converts between numbers and ingredients according
             ing_list.append(ingredients.get(ing))
     return ing_list
 
-def read_igredient_file():  #returns dictionary of igredients
+def read_ingredient_file():  #returns dictionary of igredients
     ing_list = read_file_lines('ingredients.txt')
     ingredients = {}
     for ing in ing_list:
