@@ -154,7 +154,7 @@ def search_drink_by_av_ing(width):  #searches all possible drinks by available i
     while True:
         print('Enter available ingredients or type \'help\' for further actions:\n')
         search = in_method_control('noint','Format of entries:\ningredient 1,...,ingredient n\nFormat for entries'
-                            ' with number of allowed missing ingredients:\ningredient 1,...,ingredient n[space]\n'
+                            ' with number of allowed missing ingredients:\ningredient 1,...,ingredient n[space]number\n'
                             'Don\'t use symbol \';\'.\nEnter any character to quit this application\n',width)
         if search == None:
             continue
@@ -173,22 +173,36 @@ def search_drink_by_av_ing(width):  #searches all possible drinks by available i
             missing = '0'
         missing = int(missing)
         search = set(ing.lower() for ing in search.split(','))
-        drinks = read_drink_file()
-        met_drinks = {}
-        for name, vars in drinks.items():
-            value = []
-            for var in vars:
-                if len(search & var[1]) >= len(var[1]) - missing:
-                    value.append(var)
-            if value != []:
-                met_drinks.update({name: value})
+        met_drinks = met_drinks_by_ings(search, 1, missing)
         if met_drinks == {}:
             print('No results.\n')
             continue
         drink_table(width,met_drinks)
 
 def search_drink_by_ing(width):  #searches all drinks containing entered ingredient(s)
-    print('hi2')
+    print('\n\n{0}\n'.format((width - 1) * '.'), end='')
+    print('{0:^{1}}\n'.format('SEARCH DRINKS CONTAINING ANY OF ENTERED INGREDIENTS APPLICATION', width - 1))
+    while True:
+        print('Enter ingredients or type \'help\' for further actions:\n')
+        search = in_method_control('noint','Format of entries:\ningredient 1,...,ingredient n\n'
+                            'Don\'t use symbol \';\'.\nEnter any character to quit this application\n',width)
+        if search == None:
+            continue
+
+        if len(search) < 2:
+            break
+
+        forb = ';'
+        if len(set(search) & set(forb)) > 0:
+            print('Forbidden symbols were used.\n', end='')
+            continue
+
+        search = set(ing.lower() for ing in search.split(','))
+        met_drinks = met_drinks_by_ings(search, 0, 0)
+        if met_drinks == {}:
+            print('No results.\n')
+            continue
+        drink_table(width,met_drinks)
 
 def add_drink(width):   #subfunction for adding new drinks
     print('\n\n{0}\n'.format((width - 1) * '.'), end='')
@@ -346,6 +360,18 @@ def ingredient_table(width,ings):   #prints list of ingredients
             print("{1:<{0}}\n".format(width-1-cols*ing_len,''),end='')
         i += 1
     print('\n\n{1:*<{0}}\n'.format(width-1,''),end='')
+
+def met_drinks_by_ings(search, multiplier, missing):
+    drinks = read_drink_file()
+    met_drinks = {}
+    for name, vars in drinks.items():
+        value = []
+        for var in vars:
+            if len(search & var[1]) > multiplier*(len(var[1]) - missing - 1):
+                value.append(var)
+        if value != []:
+            met_drinks.update({name: value})
+    return met_drinks
 
 def read_drink_file():  #reads drink file and returns dictionary of drinks
     drink_list = read_file_lines('drink_list.txt')
