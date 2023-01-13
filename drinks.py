@@ -1,5 +1,4 @@
 ### DRINK MANAGER BY Tadeo98
-import sys
 
 def main(): #runs as first function from which other functions are triggered
     width = 120  # should be divisible by the number of methods
