@@ -14,6 +14,15 @@ Famous Lemon,Classic,14,32,https://www.youtube.com/watch?v=fY1kBnwpt2w&list=TLPQ
 Swimming Pool,Classic,26,33,34,35,17,36,https://nabaru.cz/koktejly-a-michane-napoje/swimming-pool/
 Hanky Panky,Classic,7,37,38,https://nabaru.cz/koktejly-a-michane-napoje/hanky-panky/
 Penicillin,Light,40,39,27,11,14,https://www.youtube.com/watch?v=E86gDpGKBMg&t=626s;Classic,14,41,11,https://nabaru.cz/koktejly-a-michane-napoje/penicillin/
-Margarita,Classic,42,45,6,12,https://nabaru.cz/koktejly-a-michane-napoje/margarita/
+Margarita,Classic,42,10,6,12,https://nabaru.cz/koktejly-a-michane-napoje/margarita/
 Mulata Daiquiri,One liqueur,1,44,6,12,https://nabaru.cz/koktejly-a-michane-napoje/mulata/
-Between The Sheets,Classic,43,1,11,9,https://www.liquor.com/recipes/between-the-sheets/;Dark Rum,43,11,26,9,https://nabaru.cz/koktejly-a-michane-napoje/between-the-sheets/
+Between The Sheets,Classic,10,1,11,9,https://www.liquor.com/recipes/between-the-sheets/;Dark Rum,10,11,26,9,https://nabaru.cz/koktejly-a-michane-napoje/between-the-sheets/
+New York Sour,Classic,14,11,12,47,16,46,https://nabaru.cz/koktejly-a-michane-napoje/new-york-sour/
+Whisky Sour,Classic,14,11,12,16,https://nabaru.cz/koktejly-a-michane-napoje/whisky-sour/
+Brandy Crusta,Classic,9,10,48,11,12,47,https://nabaru.cz/vse/brandy-crusta/
+Irish Coffee,Classic,14,3,30,17,https://nabaru.cz/koktejly-a-michane-napoje/irish-coffee/
+Porn Star Martini,Classic,50,51,49,6,52,https://nabaru.cz/vse/porn-star-martini/
+Lynchburg Lemonade,Classic,14,10,11,53,https://nabaru.cz/koktejly-a-michane-napoje/lynchburg-lemonade/
+Bianco Rose,Classic,54,37,https://www.youtube.com/watch?v=umO7VRuf-L8&list=TLPQMTMwMTIwMjPZ0EtPoskYbQ&index=8
+Bitter G&T,Classic,32,7,https://www.youtube.com/watch?v=QP363Y3S8VA&list=TLPQMTMwMTIwMjPZ0EtPoskYbQ&index=9
+Espresso Tonic,Classic,8,30,https://www.youtube.com/watch?v=mGdbDi5aNmM&list=TLPQMTMwMTIwMjPZ0EtPoskYbQ&index=10

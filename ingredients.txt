@@ -40,6 +40,13 @@ honey,39
 ginger,40
 honey_ginger_syrup,41
 tequila,42
-triple_sec,43
 cacao_liqueur,44
-cointreau,45
+red_wine,46
+angostura_bitters,47
+maraschino_liqueur,48
+vanilla_syrup,49
+vanilla_vodka,50
+passionfruit_liqueur,51
+sparkling_wine,52
+sprite,53
+bitter_rose,54
