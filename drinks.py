@@ -28,7 +28,7 @@ def main(): #runs as first function from which other functions are triggered
         remain = input('\n{0:^{1}}\n'.format('To remain in the program, enter [Y].', width)).lower()
 
 def search_drink(width):
-    methods = ['Search drink by name','Search drink by ingredients(s)','Search drink by available ingredients']
+    methods = ['Search by name','Search by ingredients(s)','Search by available ing.','Find source']
     remain = 'y'
     while remain == 'y':
         print('\n\n{0}\n'.format((width-1) * '-'), end='')
@@ -43,6 +43,8 @@ def search_drink(width):
             search_drink_by_ing(width)
         elif method == 3:
             search_drink_by_av_ing(width)
+        elif method == 4:
+            find_source(width)
         else:
             continue
 
@@ -179,6 +181,33 @@ def search_drink_by_av_ing(width):  #searches all possible drinks by available i
             continue
         drink_table(width,met_drinks)
 
+def find_source(width): #prints sources for each variation of entered drink
+    print('\n\n{0}\n'.format((width - 1) * '.'), end='')
+    print('{0:^{1}}\n'.format('FIND SOURCE FOR DRINK RECIPE APPLICATION', width - 1))
+    while True:
+        print('Enter drink name or type \'help\' for further actions:\n')
+        search = in_method_control('noint','Don\'t use symbol \';\' or \',\'.\n'
+                    'Enter any character to quit this application\n',width)
+        if search == None:
+            continue
+
+        if len(search) < 2:
+            break
+
+        forb = ',;'
+        if len(set(search) & set(forb)) > 0:
+            print('Forbidden symbols were used.\n', end='')
+            continue
+
+        drinks = read_drink_file()
+        try:
+            for var in drinks[search]:
+                print('\n{0}\n{1}\n'.format(var[0],var[2]),end='')
+        except KeyError:
+            print('No such drink in drink list. Use search app to find out precise name of drink.')
+            continue
+        print('\n', end='')
+
 def search_drink_by_ing(width):  #searches all drinks containing entered ingredient(s)
     print('\n\n{0}\n'.format((width - 1) * '.'), end='')
     print('{0:^{1}}\n'.format('SEARCH DRINKS CONTAINING ANY OF ENTERED INGREDIENTS APPLICATION', width - 1))
@@ -249,7 +278,7 @@ def add_drink(width):   #subfunction for adding new drinks
                     file_lines[i] = new_line + '\n'
                 else:
                     file_lines[i] = new_line
-                edit_file_line(new_drink[0],file_lines,'drink_list.txt')
+                edit_file_line(new_drink[0],file_lines,'drink_list.txt','edited')
                 continue
         new_line = create_drink_line('',new_drink)
         if new_line == None:
@@ -302,10 +331,34 @@ def edit_drink(width):
             file_lines[i] = create_drink_line('', edit_drink) + '\n'
         else:
             file_lines[i] = create_drink_line('', edit_drink)
-        edit_file_line(edit_drink[0],file_lines,'drink_list.txt')
+        edit_file_line(edit_drink[0],file_lines,'drink_list.txt','edited')
 
 def delete_drink(width):
-    print('hi')
+    print('\n\n{0}\n'.format((width - 1) * '.'), end='')
+    print('{0:^{1}}\n'.format('DELETE DRINK APPLICATION', width - 1))
+    while True:
+        print('Enter drink to delete or type \'help\' for further actions:\n')
+        delete_drink = in_method_control('noint','Enter drink name to delete\n'
+                'Enter any character to quit this application\n',width)
+        if delete_drink == None:
+            continue
+
+        if len(delete_drink) < 2:
+            break
+
+        file_lines = read_file_lines('drink_list.txt')
+        i = 0
+        for line in file_lines:
+            if delete_drink == line[:line.index(',')]:
+                break
+            i += 1
+        if i == len(file_lines):
+            print('No such drink in drink list. Use search app to find out precise name of drink.')
+            continue
+        if file_lines[i] == file_lines[-1]:
+            file_lines[i-1] = file_lines[i-1].strip('\n')
+        file_lines.pop(i)
+        edit_file_line(delete_drink,file_lines,'drink_list.txt','deleted')
 
 def add_ingredient(width):  #function for adding new ingredients to list of ingredients
     print('\n\n{0}\n'.format((width - 1) * '.'), end='')
@@ -381,10 +434,49 @@ def edit_ingredient(width):
             file_lines[i] = edit_ing2 + ',' + str(ing_list[edit_ing1]) + '\n'
         else:
             file_lines[i] = edit_ing2 + ',' + str(ing_list[edit_ing1])
-        edit_file_line(edit_ing1+' to '+edit_ing2, file_lines, 'ingredients.txt')
+        edit_file_line(edit_ing1+' to '+edit_ing2, file_lines, 'ingredients.txt','edited')
 
 def delete_ingredient(width):
-    print('hi')
+    print('\n\n{0}\n'.format((width - 1) * '.'), end='')
+    print('{0:^{1}}\n'.format('DELETE INGREDIENT APPLICATION', width - 1))
+    while True:
+        print('Enter ingredient to delete or type \'help\' for further actions:\n')
+        delete_ing = in_method_control('noint','Enter ingredient name to delete\n'
+                'Enter any character to quit this application\n',width)
+        if delete_ing == None:
+            continue
+
+        if len(delete_ing) < 2:
+            break
+
+        file_lines = read_file_lines('ingredients.txt')
+        i = 0
+        for line in file_lines:
+            if delete_ing == line[:line.index(',')]:
+                break
+            i += 1
+        if i == len(file_lines):
+            print('No such ingredient in drink list. Use search app to find out precise name of drink.')
+            continue
+        drinks = read_drink_file()
+        met_drinks = set()
+        print('{0} is present in following drinks:\n'.format(delete_ing), end='')
+        for name, value in drinks.items():
+            for var in value:
+                if delete_ing in var[1]:
+                    met_drinks.add(name)
+                    continue
+        for drink in met_drinks:
+            print('{0}\n'.format(drink),end='')
+        if len(met_drinks) != 0:
+            print('Can\'t delete {0} until it\'s not present in any drink.\n'.format(delete_ing), end='')
+            continue
+        else:
+            print('None\n', end='')
+        if file_lines[i] == file_lines[-1]:
+            file_lines[i-1] = file_lines[i-1].strip('\n')
+        file_lines.pop(i)
+        edit_file_line(delete_ing,file_lines,'ingredients.txt','deleted')
 
 def drink_table(width,drinks):    #prints list of drinks
     if drinks == {}:
@@ -556,11 +648,11 @@ def add_line_to_file(line,path,item):   #adds new line to any file
     f.close()
     print('{0} was added to list of {1}.\n'.format(line.split(',')[0],item),end='')
 
-def edit_file_line(drink_ing,lines,path):   #edits any line in file
+def edit_file_line(drink_ing,lines,path,action):   #edits any line in file
     with open(path,'w') as f:
         f.writelines(lines)
     f.close()
-    print('{0} was edited.\n'.format(drink_ing),end='')
+    print('{0} was {1}.\n'.format(drink_ing,action),end='')
 
 def read_file_lines(path):  #reads file and returns list of lines
     with open(path,'r',encoding='utf8') as f:
