@@ -256,9 +256,53 @@ def add_drink(width):   #subfunction for adding new drinks
             continue
         add_line_to_file(new_line,'drink_list.txt','drinks')
 
-
 def edit_drink(width):
-    print('hi')
+    print('\n\n{0}\n'.format((width - 1) * '.'), end='')
+    print('{0:^{1}}\n'.format('EDIT DRINK APPLICATION', width - 1))
+    while True:
+        print('Enter edited drink or type \'help\' for further actions:\n')
+        edit_drink = in_method_control('noint','Enter drink name to search and show its line or enter whole drink '
+                'line.\nFormat for drink (one variation) input:\nDrink,Variation,ingredient 1,...,ingredient n,'
+                'source\nFormat for drink (more variations) input:\nDrink,Variation 1,ingredient 1,...,'
+                'ingredient n,source;...;Variation n,ingredient 1,...,ingredient n,source\n'
+                'Enter any character to quit this application\n',width)
+        if edit_drink == None:
+            continue
+
+        if len(edit_drink) < 2:
+            break
+
+        if edit_drink.count(',') == 0:
+            print('Line for {0}:\n'.format(edit_drink),end='')
+            file_lines = read_file_lines('drink_list.txt')
+            for line in file_lines:
+                if edit_drink == line[:line.index(',')]:
+                    drinks = read_drink_file()
+                    line_print = '{0},'.format(edit_drink)
+                    for var in drinks[edit_drink]:
+                        line_print += '{0},{1},{2};'.format(var[0],','.join(var[1]),var[2])
+                    print('{0}\n'.format(line_print[:-1]),end='')
+                    break
+                if line == file_lines[-1]:
+                    print('No such drink in drink list. Use search app to find out precise name of drink.')
+            continue
+
+        if edit_drink.count(',') < 3 or len(edit_drink) < 7:
+            print('Incorrect format.\n',end='')
+            continue
+
+        edit_drink = read_drink_row(edit_drink)
+        file_lines = read_file_lines('drink_list.txt')
+        i = 0
+        for line in file_lines:
+            if edit_drink[0] == line[:line.index(',')]:
+                break
+            i += 1
+        if file_lines[i] != file_lines[-1]:
+            file_lines[i] = create_drink_line('', edit_drink) + '\n'
+        else:
+            file_lines[i] = create_drink_line('', edit_drink)
+        edit_file_line(edit_drink[0],file_lines,'drink_list.txt')
 
 def delete_drink(width):
     print('hi')
@@ -296,11 +340,48 @@ def add_ingredient(width):  #function for adding new ingredients to list of ingr
                   'ingredient\n'.format(', '.join(similar_ings)),end='')
             if input().lower() == 'n':
                 continue
-        new_line = new_ing + ',' + str(len(ing_list.keys())+1)
+        new_line = new_ing + ',' + str(max(ing_list.values())+1)
         add_line_to_file(new_line,'ingredients.txt','igredients')
 
 def edit_ingredient(width):
-    print('hi')
+    print('\n\n{0}\n'.format((width - 1) * '.'), end='')
+    print('{0:^{1}}\n'.format('EDIT INGREDIENT APPLICATION', width - 1))
+    while True:
+        print('Enter old ingredient, then new one or type \'help\' for further actions:\n')
+        edit_ing1 = in_method_control('noint','Enter ingredient to be replaced, then its replacement.\nFor multiple '
+                    'word ingredient use \'_\' instead of '
+                    'space. No semicolons. No commas.\nEnter any character to quit this application\n',width)
+        if edit_ing1 == None:
+            continue
+
+        if len(edit_ing1) < 2:
+            break
+
+        forb = ' ;,'
+        if len(set(edit_ing1) & set(forb)) > 0:
+            print('Forbidden symbols were used.\n',end='')
+            continue
+
+        edit_ing1 = edit_ing1.lower()
+        ing_list = read_ingredient_file()
+        file_lines = read_file_lines('ingredients.txt')
+        i = 0
+        for line in file_lines:
+            if edit_ing1 == line[:line.index(',')]:
+                break
+            i += 1
+        if edit_ing1 not in ing_list.keys():
+            print('Ingredient {0} doesn\'t exist.\n'.format(edit_ing1),end='')
+            continue
+        edit_ing2 = input('...will be replaced with:\n').lower()
+        if len(set(edit_ing2) & set(forb)) > 0:
+            print('Forbidden symbols were used.\n',end='')
+            continue
+        if file_lines[i] != file_lines[-1]:
+            file_lines[i] = edit_ing2 + ',' + str(ing_list[edit_ing1]) + '\n'
+        else:
+            file_lines[i] = edit_ing2 + ',' + str(ing_list[edit_ing1])
+        edit_file_line(edit_ing1+' to '+edit_ing2, file_lines, 'ingredients.txt')
 
 def delete_ingredient(width):
     print('hi')
@@ -361,7 +442,7 @@ def ingredient_table(width,ings):   #prints list of ingredients
         i += 1
     print('\n\n{1:*<{0}}\n'.format(width-1,''),end='')
 
-def met_drinks_by_ings(search, multiplier, missing):
+def met_drinks_by_ings(search, multiplier, missing): #finds drinks by entry ingredients and returns dict of those drinks
     drinks = read_drink_file()
     met_drinks = {}
     for name, vars in drinks.items():
@@ -402,7 +483,7 @@ def print_titles(width, titles, symbol):    #prints rows with methods and corres
             print(symbol,end='')
     print('\n',end='')
 
-def create_drink_line(old_drink,drink):
+def create_drink_line(old_drink,drink): #creates lines to be inserted into file from list of elements defining drink
     if old_drink == '':
         drink_line = drink[0] + ','
     else:
@@ -469,19 +550,19 @@ def read_ingredient_file():  #returns dictionary of igredients
         ingredients.update({ing[0]:int(ing[1])})
     return ingredients
 
-def add_line_to_file(line,path,item):
+def add_line_to_file(line,path,item):   #adds new line to any file
     with open(path,'a') as f:
         f.write('\n{0}'.format(line))
     f.close()
     print('{0} was added to list of {1}.\n'.format(line.split(',')[0],item),end='')
 
-def edit_file_line(drink,lines,path):
+def edit_file_line(drink_ing,lines,path):   #edits any line in file
     with open(path,'w') as f:
         f.writelines(lines)
     f.close()
-    print('{0} was edited in drink list.\n'.format(drink),end='')
+    print('{0} was edited.\n'.format(drink_ing),end='')
 
-def read_file_lines(path):
+def read_file_lines(path):  #reads file and returns list of lines
     with open(path,'r',encoding='utf8') as f:
         lines = f.readlines()
     return lines

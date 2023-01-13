@@ -1,5 +1,19 @@
 Mojito,European,1,2,3,4,5,https://nabaru.cz/koktejly-a-michane-napoje/mojito/;American,1,6,3,4,5,https://nabaru.cz/koktejly-a-michane-napoje/mojito/
-Gin & Tonic,Classic,7,8,https://nabaru.cz/koktejly-a-michane-napoje/gin-tonic/;For Men,7,8,https://nabaru.cz/koktejly-a-michane-napoje/gin-tonic/;For women,7,8,https://nabaru.cz/koktejly-a-michane-napoje/gin-tonic/
+Gin & Tonic,Classic,8,7,https://nabaru.cz/koktejly-a-michane-napoje/gin-tonic/;For Men,8,7,https://nabaru.cz/koktejly-a-michane-napoje/gin-tonic/;For women,8,7,https://nabaru.cz/koktejly-a-michane-napoje/gin-tonic/
 Sidecar,Classic,9,10,11,12,https://nabaru.cz/koktejly-a-michane-napoje/sidecar/
 Blue Blazer,Classic,14,13,12,https://nabaru.cz/koktejly-a-michane-napoje/blue-blazer/
 Ramos Gin Fizz,Classic,7,11,6,12,15,5,16,17,https://nabaru.cz/koktejly-a-michane-napoje/ramos-gin-fizz-2/
+Rusty Nail,Classic,14,18,https://www.youtube.com/watch?v=F9gHpM7sksc
+Apricot Star,Classic,7,21,8,https://www.youtube.com/watch?v=jbYDWC7i7Vw&list=TLPQMTIwMTIwMjP61b11ANTdww&index=2
+Bramble,Classic,7,11,12,23,https://nabaru.cz/koktejly-a-michane-napoje/bramble/
+Ron Apple Pie,Classic,26,25,24,https://www.youtube.com/watch?v=eA0k47HykdY&list=TLPQMTIwMTIwMjP61b11ANTdww&index=5
+Planter's Punch,Classic,26,12,6,28,27,5,https://nabaru.cz/koktejly-a-michane-napoje/planters-punch/
+Spicy Autumn,Classic,7,25,29,8,https://www.youtube.com/watch?v=kpyeOi5pMIY&list=TLPQMTIwMTIwMjP61b11ANTdww&index=7
+Wild Costa Tonic,Classic,7,31,30,8,https://www.youtube.com/watch?v=qIFS9QuIHDg&list=TLPQMTIwMTIwMjP61b11ANTdww&index=8
+Famous Lemon,Classic,14,32,https://www.youtube.com/watch?v=fY1kBnwpt2w&list=TLPQMTIwMTIwMjP61b11ANTdww&index=9
+Swimming Pool,Classic,26,33,34,35,17,36,https://nabaru.cz/koktejly-a-michane-napoje/swimming-pool/
+Hanky Panky,Classic,7,37,38,https://nabaru.cz/koktejly-a-michane-napoje/hanky-panky/
+Penicillin,Light,40,39,27,11,14,https://www.youtube.com/watch?v=E86gDpGKBMg&t=626s;Classic,14,41,11,https://nabaru.cz/koktejly-a-michane-napoje/penicillin/
+Margarita,Classic,42,45,6,12,https://nabaru.cz/koktejly-a-michane-napoje/margarita/
+Mulata Daiquiri,One liqueur,1,44,6,12,https://nabaru.cz/koktejly-a-michane-napoje/mulata/
+Between The Sheets,Classic,43,1,11,9,https://www.liquor.com/recipes/between-the-sheets/;Dark Rum,43,11,26,9,https://nabaru.cz/koktejly-a-michane-napoje/between-the-sheets/
