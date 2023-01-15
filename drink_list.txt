@@ -14,7 +14,7 @@ Famous Lemon,Classic,14,32,https://www.youtube.com/watch?v=fY1kBnwpt2w&list=TLPQ
 Swimming Pool,Classic,26,33,34,35,17,36,https://nabaru.cz/koktejly-a-michane-napoje/swimming-pool/
 Hanky Panky,Classic,7,37,38,https://nabaru.cz/koktejly-a-michane-napoje/hanky-panky/
 Penicillin,Light,40,39,27,11,14,https://www.youtube.com/watch?v=E86gDpGKBMg&t=626s;Classic,14,41,11,https://nabaru.cz/koktejly-a-michane-napoje/penicillin/
-Margarita,Classic,42,10,6,12,https://nabaru.cz/koktejly-a-michane-napoje/margarita/
+Margarita,Gold,10,6,12,57,https://nabaru.cz/koktejly-a-michane-napoje/margarita/;Silver,10,6,12,42,https://nabaru.cz/koktejly-a-michane-napoje/margarita/
 Mulata Daiquiri,One liqueur,1,44,6,12,https://nabaru.cz/koktejly-a-michane-napoje/mulata/
 Between The Sheets,Classic,10,1,11,9,https://www.liquor.com/recipes/between-the-sheets/;Dark Rum,10,11,26,9,https://nabaru.cz/koktejly-a-michane-napoje/between-the-sheets/
 New York Sour,Classic,14,11,12,47,16,46,https://nabaru.cz/koktejly-a-michane-napoje/new-york-sour/
@@ -26,3 +26,15 @@ Lynchburg Lemonade,Classic,14,10,11,53,https://nabaru.cz/koktejly-a-michane-napo
 Bianco Rose,Classic,54,37,https://www.youtube.com/watch?v=umO7VRuf-L8&list=TLPQMTMwMTIwMjPZ0EtPoskYbQ&index=8
 Bitter G&T,Classic,32,7,https://www.youtube.com/watch?v=QP363Y3S8VA&list=TLPQMTMwMTIwMjPZ0EtPoskYbQ&index=9
 Espresso Tonic,Classic,8,30,https://www.youtube.com/watch?v=mGdbDi5aNmM&list=TLPQMTMwMTIwMjPZ0EtPoskYbQ&index=10
+Herbal Spritz,Classic,56,55,52,https://www.youtube.com/watch?v=Ig8peLKBLZ0&list=TLPQMTMwMTIwMjPZ0EtPoskYbQ&index=11
+Whisky Ginger,Classic,24,14,25,https://www.youtube.com/watch?v=4myXuXWCwgg&list=TLPQMTMwMTIwMjPZ0EtPoskYbQ&index=12
+El Diablo,Classic,57,58,6,60,https://www.diffordsguide.com/cocktails/recipe/700/el-diablo-cocktail;No Beer,57,58,6,59,24,https://nabaru.cz/koktejly-a-michane-napoje/el-diablo/
+Sex On The Beach,Classic,33,61,27,62,https://www.bbcgoodfood.com/recipes/sex-beach-cocktail;With Grenadine,33,61,27,62,28,https://nabaru.cz/koktejly-a-michane-napoje/sex-on-the-beach/
+Zombie,Classic,26,1,63,6,64,28,27,65,66,47,https://nabaru.cz/koktejly-a-michane-napoje/zombie/
+Corpse Reviver,No.1,9,67,37,https://nabaru.cz/koktejly-a-michane-napoje/corpse-reviver-no-1/;No.2,7,11,10,37,66,https://www.acouplecooks.com/corpse-reviver/
+Moscow Mule,Classic,33,60,6,https://www.liquor.com/recipes/moscow-mule-cocktail-recipe/;Light,33,24,59,6,https://nabaru.cz/koktejly-a-michane-napoje/moscow-mule-2/
+Long Island Iced Tea,Silver,33,7,1,42,10,6,12,68,https://nabaru.cz/koktejly-a-michane-napoje/long-island-iced-tea/;Gold,33,7,1,57,10,6,12,68,https://nabaru.cz/koktejly-a-michane-napoje/long-island-iced-tea/
+Vesper,Classic,7,33,37,https://nabaru.cz/koktejly-a-michane-napoje/vesper/
+Negroni,Classic,7,69,37,https://nabaru.cz/koktejly-a-michane-napoje/negroni/
+Martinez,Classic,7,37,48,47,https://nabaru.cz/koktejly-a-michane-napoje/martinez/
+Mai Tai,Don Beachcomber,1,63,10,70,6,65,66,https://nabaru.cz/koktejly-a-michane-napoje/mai-tai-don-beachcomber/;Trader Vic,26,10,70,6,https://nabaru.cz/koktejly-a-michane-napoje/mai-tai-trader-vic/
