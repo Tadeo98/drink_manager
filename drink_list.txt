@@ -35,6 +35,22 @@ Corpse Reviver,No.1,9,67,37,https://nabaru.cz/koktejly-a-michane-napoje/corpse-r
 Moscow Mule,Classic,33,60,6,https://www.liquor.com/recipes/moscow-mule-cocktail-recipe/;Light,33,24,59,6,https://nabaru.cz/koktejly-a-michane-napoje/moscow-mule-2/
 Long Island Iced Tea,Silver,33,7,1,42,10,6,12,68,https://nabaru.cz/koktejly-a-michane-napoje/long-island-iced-tea/;Gold,33,7,1,57,10,6,12,68,https://nabaru.cz/koktejly-a-michane-napoje/long-island-iced-tea/
 Vesper,Classic,7,33,37,https://nabaru.cz/koktejly-a-michane-napoje/vesper/
-Negroni,Classic,7,69,37,https://nabaru.cz/koktejly-a-michane-napoje/negroni/
+Negroni,Classic,7,69,37,https://nabaru.cz/koktejly-a-michane-napoje/negroni/;Kingston,26,37,69,86,74,https://nabaru.cz/koktejly-a-michane-napoje/originalni-koncept-rumu-brugal-1888/
 Martinez,Classic,7,37,48,47,https://nabaru.cz/koktejly-a-michane-napoje/martinez/
 Mai Tai,Don Beachcomber,1,63,10,70,6,65,66,https://nabaru.cz/koktejly-a-michane-napoje/mai-tai-don-beachcomber/;Trader Vic,26,10,70,6,https://nabaru.cz/koktejly-a-michane-napoje/mai-tai-trader-vic/
+Gimlet,Classic,7,71,6,https://www.simplyrecipes.com/recipes/gimlet_cocktail/
+Gibson,Classic,7,37,https://nabaru.cz/koktejly-a-michane-napoje/gibson/
+Stinger,Classic,9,72,https://nabaru.cz/koktejly-a-michane-napoje/stinger/
+Bijou,Classic,7,37,73,74,https://imbibemagazine.com/recipe/bijou-cocktail-recipe/;No Bitters,7,37,73,https://nabaru.cz/koktejly-a-michane-napoje/bijou-cocktail/
+Painkiller,Traditional,26,36,75,27,https://www.acouplecooks.com/painkiller-cocktail/;Regular Rum,26,36,75,27,https://nabaru.cz/koktejly-a-michane-napoje/painkiller/
+Tommy's Margarita,Gold,57,6,29,https://nabaru.cz/koktejly-a-michane-napoje/tommys-margarita/;Silver,42,6,29,https://www.liquor.com/recipes/tommys-margarita/
+Daiquiri,Classic,1,6,12,https://nabaru.cz/koktejly-a-michane-napoje/daiquiri/
+Leviathan,Classic,9,76,37,27,https://nabaru.cz/koktejly-a-michane-napoje/leviathan/
+Katedrovka,KGGI No.1,77,40,7,78,Zdroj-doktorandi;KGGI No.2,44,28,65,14,Tadeo vymyslel - whisky musi byt irska (kggI)
+Pina Colada,Altered,36,26,1,6,80,79,35,https://nabaru.cz/koktejly-a-michane-napoje/pina-colada/;Classic,1,35,36,https://www.bbcgoodfood.com/recipes/pina-colada
+Sazerac,Cognac,9,12,81,66,https://nabaru.cz/koktejly-a-michane-napoje/sazerac/
+Mint Julep,Kentucky,82,12,4,https://www.gastronomblog.com/kentucky-derby-mint-julep/;Whisky,14,12,47,4,https://nabaru.cz/koktejly-a-michane-napoje/kentucky-mint-julep/
+Gin Fizz,Classic,7,11,12,5,https://www.youtube.com/watch?v=dNrUntuG1tg&list=TLPQMTUwMTIwMjMXUfmojw2IMQ&index=19;Silver,7,11,12,5,16,https://www.liquor.com/silver-fizz-cocktail-recipe-5224789;Golden,7,11,12,5,83,https://www.diffordsguide.com/cocktails/recipe/876/golden-fizz;Royal,7,11,12,5,83,16,http://www.safeeggs.com.s3-website-us-west-2.amazonaws.com/recipes/royal-gin-fizz-recipe.html;Diamond,7,11,12,52,https://www.diffordsguide.com/cocktails/recipe/642/diamond-fizz
+Night Cap,One Of Many,88,85,26,https://nabaru.cz/koktejly-a-michane-napoje/originalni-koncept-rumu-brugal-1888/
+Maestro Ronero,Classic,26,88,87,74,https://nabaru.cz/koktejly-a-michane-napoje/originalni-koncept-rumu-brugal-1888/
+El Presidente,Classic,1,89,10,28,https://www.liquor.com/recipes/el-presidente/;El Viejo,26,44,89,73,https://nabaru.cz/koktejly-a-michane-napoje/originalni-koncept-rumu-brugal-1888/

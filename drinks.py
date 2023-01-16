@@ -493,7 +493,7 @@ def drink_table(width,drinks):    #prints list of drinks
     print("{1:^{0}}\n\n".format(width - 1, 'DRINK LIST'), end='')
     print("{3:<{0}}{4:<{1}}{5:<{2}}\n\n".format(title_len+mcs,var_len+mcs, width-1-title_len-var_len,
                                             title[0],title[1],title[2]),end='')
-    for drink, rest in drinks.items():
+    for drink, rest in sorted(drinks.items()):
         print("{1:<{0}}".format(title_len+mcs, drink), end='')
         for var in rest:
             ing_lines = []
@@ -530,10 +530,10 @@ def ingredient_table(width,ings):   #prints list of ingredients
     print("{1:^{0}}\n\n".format(width - 1, 'LIST OF INGREDIENTS'), end='')
     cols = (width-1)//(ing_len+mcs)
     i = 1
-    for ing in ings.keys():
+    for ing in sorted(ings.keys()):
         print("{1:<{0}}".format(ing_len+mcs,ing),end='')
         if i % cols == 0:
-            print("{1:<{0}}\n".format(width-1-cols*ing_len,''),end='')
+            print("{1:<{0}}\n\n".format(width-1-cols*ing_len,''),end='')
         i += 1
     print('\n\n{1:*<{0}}\n'.format(width-1,''),end='')
 
