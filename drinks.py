@@ -149,12 +149,15 @@ def search_drink_by_name(width):    #searches drinks by name
             continue
         drink_table(width,met_drinks)
 
-def search_drink_by_ing(width):  #searches all drinks containing at least entered ingredient(s)
+def search_drink_by_ing(width):  #searches all drinks containing any or all entered ingredient(s)
     print('\n\n{0}\n'.format((width - 1) * '.'), end='')
-    print('{0:^{1}}\n'.format('SEARCH DRINKS CONTAINING ENTERED INGREDIENTS APPLICATION', width - 1))
+    print('{0:^{1}}\n'.format('SEARCH DRINKS CONTAINING ANY OR ALL OF ENTERED INGREDIENTS APPLICATION', width - 1))
     while True:
         print('Enter ingredients or type \'help\' for further actions:\n')
-        search = in_method_control('noint','Format of entries:\ningredient 1,...,ingredient n\n'
+        search = in_method_control('noint','Format of entries when looking for drink containing any of entered '
+                            'ingredients:\ningredient 1,...,ingredient n\n or: \ningredient 1,...,ingredient n 1\n'
+                            'Format of entries when looking for drink containing all of entered ingredients:\n'
+                            'ingredient 1,...,ingredient n 2\n'
                             'Don\'t use symbol \';\'.\nEnter any character to quit this application\n',width)
         if search == None:
             continue
@@ -167,8 +170,14 @@ def search_drink_by_ing(width):  #searches all drinks containing at least entere
             print('\nForbidden symbols were used.\n\n', end='')
             continue
 
+        if ' ' in search:
+            search,method = search.split(' ')
+        else:
+            method = '1'
+
+        method = int(method)
         search = set(ing.lower() for ing in search.split(','))
-        met_drinks = met_drinks_by_ings(search, 0, 0)
+        met_drinks = met_drinks_by_ings(search, method)
         if met_drinks == {}:
             print('\nNo results.\n')
             continue
@@ -199,7 +208,7 @@ def search_drink_by_av_ing(width):  #searches all possible drinks by available i
             missing = '0'
         missing = int(missing)
         search = set(ing.lower() for ing in search.split(','))
-        met_drinks = met_drinks_by_ings(search, 1, missing)
+        met_drinks = met_drinks_by_ings(search, 3, missing)
         if met_drinks == {}:
             print('\nNo results.\n')
             continue
@@ -223,7 +232,7 @@ def find_source(width): #prints sources for each variation of entered drink
             print('\nForbidden symbols were used.\n\n', end='')
             continue
 
-        search = search.title()
+        #search = search.title() #creates problems when dashes or apostrophes are present
         drinks = read_drink_file()
         try:
             print('\nSources for {0} variations:\n'.format(search), end='')
@@ -537,15 +546,21 @@ def ingredient_table(width,ings):   #prints list of ingredients
         i += 1
     print('\n\n{1:*<{0}}\n'.format(width-1,''),end='')
 
-def met_drinks_by_ings(search, index, missing): #finds drinks by entry ingredients and returns dict of those drinks
+def met_drinks_by_ings(search, method, missing=0): #finds drinks by entry ingredients and returns dict of those drinks
     drinks = read_drink_file()
     met_drinks = {}
     for name, vars in drinks.items():
         value = []
         for var in vars:
-            ing_list = [search,var[1]]
-            if len(ing_list[0] & ing_list[1]) >= len(ing_list[index]) - missing:
-                value.append(var)
+            if method == 1:
+                if search & var[1]:
+                    value.append(var)
+            elif method == 2:
+                if search & var[1] == search:
+                    value.append(var)
+            elif method == 3:
+                if search & var[1] and len(search & var[1]) >= len(var[1]) - missing:
+                    value.append(var)
         if value != []:
             met_drinks.update({name: value})
     return met_drinks

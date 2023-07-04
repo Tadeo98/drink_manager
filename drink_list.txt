@@ -34,23 +34,86 @@ Zombie,Classic,26,1,63,6,64,28,27,65,66,47,https://nabaru.cz/koktejly-a-michane-
 Corpse Reviver,No.1,9,67,37,https://nabaru.cz/koktejly-a-michane-napoje/corpse-reviver-no-1/;No.2,7,11,10,37,66,https://www.acouplecooks.com/corpse-reviver/
 Moscow Mule,Classic,33,60,6,https://www.liquor.com/recipes/moscow-mule-cocktail-recipe/;Light,33,24,59,6,https://nabaru.cz/koktejly-a-michane-napoje/moscow-mule-2/
 Long Island Iced Tea,Silver,33,7,1,42,10,6,12,68,https://nabaru.cz/koktejly-a-michane-napoje/long-island-iced-tea/;Gold,33,7,1,57,10,6,12,68,https://nabaru.cz/koktejly-a-michane-napoje/long-island-iced-tea/
-Vesper,Classic,7,33,37,https://nabaru.cz/koktejly-a-michane-napoje/vesper/
+Vesper,Classic,7,89,33,https://nabaru.cz/koktejly-a-michane-napoje/vesper/
 Negroni,Classic,7,69,37,https://nabaru.cz/koktejly-a-michane-napoje/negroni/;Kingston,26,37,69,86,74,https://nabaru.cz/koktejly-a-michane-napoje/originalni-koncept-rumu-brugal-1888/
 Martinez,Classic,7,37,48,47,https://nabaru.cz/koktejly-a-michane-napoje/martinez/
 Mai Tai,Don Beachcomber,1,63,10,70,6,65,66,https://nabaru.cz/koktejly-a-michane-napoje/mai-tai-don-beachcomber/;Trader Vic,26,10,70,6,https://nabaru.cz/koktejly-a-michane-napoje/mai-tai-trader-vic/
-Gimlet,Classic,7,71,6,https://www.simplyrecipes.com/recipes/gimlet_cocktail/
-Gibson,Classic,7,37,https://nabaru.cz/koktejly-a-michane-napoje/gibson/
+Gimlet,Classic,7,71,6,https://www.simplyrecipes.com/recipes/gimlet_cocktail/;Cucumber Mint Vodka,33,6,12,4,131,https://www.youtube.com/watch?v=SLrnyXaNWOI
+Gibson,Classic,7,89,https://nabaru.cz/koktejly-a-michane-napoje/gibson/
 Stinger,Classic,9,72,https://nabaru.cz/koktejly-a-michane-napoje/stinger/
 Bijou,Classic,7,37,73,74,https://imbibemagazine.com/recipe/bijou-cocktail-recipe/;No Bitters,7,37,73,https://nabaru.cz/koktejly-a-michane-napoje/bijou-cocktail/
 Painkiller,Traditional,26,36,75,27,https://www.acouplecooks.com/painkiller-cocktail/;Regular Rum,26,36,75,27,https://nabaru.cz/koktejly-a-michane-napoje/painkiller/
 Tommy's Margarita,Gold,57,6,29,https://nabaru.cz/koktejly-a-michane-napoje/tommys-margarita/;Silver,42,6,29,https://www.liquor.com/recipes/tommys-margarita/
 Daiquiri,Classic,1,6,12,https://nabaru.cz/koktejly-a-michane-napoje/daiquiri/
 Leviathan,Classic,9,76,37,27,https://nabaru.cz/koktejly-a-michane-napoje/leviathan/
-Katedrovka,KGGI No.1,77,40,7,78,Zdroj-doktorandi;KGGI No.2,44,28,65,14,Tadeo vymyslel - whisky musi byt irska (kggI)
+Katedrovka,KGGI No.1,77,78,7,40,Zdroj-doktorandi;KGGI No.2,44,65,14,28,Tadeo vymyslel - whisky musi byt irska (kggI);KGGI No.3,143,7,40,144,Tomasov a Laurin vymysel
 Pina Colada,Altered,36,26,1,6,80,79,35,https://nabaru.cz/koktejly-a-michane-napoje/pina-colada/;Classic,1,35,36,https://www.bbcgoodfood.com/recipes/pina-colada
 Sazerac,Cognac,9,12,81,66,https://nabaru.cz/koktejly-a-michane-napoje/sazerac/
 Mint Julep,Kentucky,82,12,4,https://www.gastronomblog.com/kentucky-derby-mint-julep/;Whisky,14,12,47,4,https://nabaru.cz/koktejly-a-michane-napoje/kentucky-mint-julep/
 Gin Fizz,Classic,7,11,12,5,https://www.youtube.com/watch?v=dNrUntuG1tg&list=TLPQMTUwMTIwMjMXUfmojw2IMQ&index=19;Silver,7,11,12,5,16,https://www.liquor.com/silver-fizz-cocktail-recipe-5224789;Golden,7,11,12,5,83,https://www.diffordsguide.com/cocktails/recipe/876/golden-fizz;Royal,7,11,12,5,83,16,http://www.safeeggs.com.s3-website-us-west-2.amazonaws.com/recipes/royal-gin-fizz-recipe.html;Diamond,7,11,12,52,https://www.diffordsguide.com/cocktails/recipe/642/diamond-fizz
 Night Cap,One Of Many,88,85,26,https://nabaru.cz/koktejly-a-michane-napoje/originalni-koncept-rumu-brugal-1888/
 Maestro Ronero,Classic,26,88,87,74,https://nabaru.cz/koktejly-a-michane-napoje/originalni-koncept-rumu-brugal-1888/
-El Presidente,Classic,1,89,10,28,https://www.liquor.com/recipes/el-presidente/;El Viejo,26,44,89,73,https://nabaru.cz/koktejly-a-michane-napoje/originalni-koncept-rumu-brugal-1888/
+El Presidente,Classic,1,28,119,89,https://www.liquor.com/recipes/el-presidente/;El Viejo,26,73,44,89,https://nabaru.cz/koktejly-a-michane-napoje/originalni-koncept-rumu-brugal-1888/
+Aperol Spritz,Classic,86,52,5,https://nabaru.cz/koktejly-a-michane-napoje/aperol-spritz/
+Last Word,Classic,7,73,48,6,https://nabaru.cz/koktejly-a-michane-napoje/last-word/
+The Sound And The Slurry,Classic,7,58,11,Tequila Mockingbird
+One Flew Over The Cosmo's Nest,Classic,33,62,10,6,Tequila Mockingbird
+Ethan Pom,Classic,90,28,Tequila Mockingbird
+Rye And Prejudice,Classic,65,14,Tequila Mockingbird
+Love In The Time Of Kahlua,Classic,1,91,17,92,Tequila Mockingbird
+Brave New Swirled,Classic,33,93,11,3,94,Tequila Mockingbird
+A Cocktail Of Two Cities,Classic,3,7,11,90,Tequila Mockingbird
+TThe Cooler Purple,Classic,23,61,1,11,Tequila Mockingbird
+Frangelico And Zooey,Classic,30,95,17,Tequila Mockingbird
+Bloody Carrie,Classic,96,33,6,97,98,99,79,100,Tequila Mockingbird
+Howards Blend,Classic,101,70,47,Tequila Mockingbird
+Gin Eyre,Classic,4,7,11,3,74,Tequila Mockingbird
+Paradise Sauced,Classic,3,33,102,6,Tequila Mockingbird
+The Joy Of Sex On The Beach,Classic,36,33,61,103,Tequila Mockingbird
+A Midsummer Night's Beam,Classic,4,6,3,82,5,Tequila Mockingbird
+The Postman Always Brings Ice,Classic,104,68,Tequila Mockingbird
+Remembrance Of Things Pabst,Classic,106,105,Tequila Mockingbird
+Bridget Jones's Daiquiri,Classic,107,90,11,3,Tequila Mockingbird
+Romeo And Julep,Classic,4,108,61,82,103,Tequila Mockingbird
+The S(ide)carlet Letter,Classic,3,109,101,10,Tequila Mockingbird
+A Rum Of One's Own,Clasic,110,108,92,26,Tequila Mockingbird
+Tequila Mockingbird,Classic,42,99,111,Tequila Mockingbird
+The Yellow Wallbanger,Classic,33,27,112,Tequila Mockingbird
+The Unbearable Lightness Of Peeing,Classic,36,66,Tequila Mockingbird
+Are You There God? It's Me Margarita,Classic,79,42,6,10,Tequila Mockingbird
+The Turn Of The Screwdriver,Theory 1,27,33,Tequila Mockingbird;Theory 2,113,50,Tequila Mockingbird
+Crime And Punish-Mint,Classic,33,91,114,17,Tequila Mockingbird
+Decline And Fall Down,Classic,115,68,Tequila Mockingbird
+Drankenstein,Classic,94,42,5,Tequila Mockingbird
+Huckleberry Sin,Classic,116,117,5,Tequila Mockingbird
+Absinthe Shrugged,Classic,66,3,Tequila Mockingbird
+The Count Of Monte Cristal,Classic,118,90,Tequila Mockingbird
+Moby-Drink,Classic,33,34,103,Tequila Mockingbird
+Gulp-Iver's Travels,Classic,33,61,65,62,Tequila Mockingbird
+A Confederacy Of Ounces,Classic,120,14,3,81,47,Tequila Mockingbird
+The Last Of The Mojitos,Classic,116,107,4,11,29,1,5,Tequila Mockingbird
+The Lime Of The Ancient Mariner,Classic,79,6,65,7,Tequila Mockingbird
+Lord Of The Mai-Tais,Classic,62,27,1,121,28,Tequila Mockingbird
+Infinite Zest,Classic,33,122,11,Tequila Mockingbird
+Heart Of Dark Mist,Classic,23,7,11,Tequila Mockingbird
+The Moonshine And Sixpence,Classic,14,36,35,Tequila Mockingbird
+A Farewell To Amaretto,Classic,123,11,3,Tequila Mockingbird
+One Hundred Beers Of Solitude,Classic,124,105,47,Tequila Mockingbird
+Orange Julius Caesar,Classic,27,125,1,3,126,Tequila Mockingbird
+Vermouth The Bell Tolls,Classic,127,37,81,Tequila Mockingbird
+Silas Marnier,Classic,128,76,24,47,Tequila Mockingbird
+The Old Man And The Seagram's,Classic,14,103,Tequila Mockingbird
+The Malted Falcon,Classic,129,130,Tequila Mockingbird
+Twenty Thousand Leagues Under The Sea Breeze,Classic,33,65,62,5,Tequila Mockingbird
+Lord Pimm,Classic,131,132,103,Tequila Mockingbird
+Fahrenheit 151,Classic,133,62,27,36,134,92,26,Tequila Mockingbird
+Gone With The Wine,Classic,46,135,3,136,137,24,Tequila Mockingbird
+The Rye In The Catcher,Classic,14,36,11,60,Tequila Mockingbird
+The Adventures Of Sherbet Holmes,Classic,138,90,24,Tequila Mockingbird
+The Pitcher Of Dorian Grey Goose,Classic,4,139,33,Tequila Mockingbird
+The Portrait Of A Pink Lady,Classic,7,140,28,5,Tequila Mockingbird
+The Joy Luck Club Soda,Classic,1,27,5,11,101,70,Tequila Mockingbird
+Ugurundu,Classic,4,142,141,https://www.diffordsguide.com/cocktails/recipe/2011/ugurundu
+Bloody Mary,Classic,33,96,11,97,99,79,100,145,https://www.bbcgoodfood.com/recipes/bloody-mary
+Collins,Lemon Rosemary Vodka,12,33,146,11,5,https://www.youtube.com/watch?v=SLrnyXaNWOI
+Clover Club,Classic,7,11,147,16,https://www.liquor.com/recipes/clover-club/
